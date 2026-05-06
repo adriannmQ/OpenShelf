@@ -1,9 +1,10 @@
-package com.example.openshelf
+package com.example.openshelf.actividades
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.openshelf.R
 import com.google.android.material.card.MaterialCardView
 
 class MenuPrincipalActivity : AppCompatActivity() {

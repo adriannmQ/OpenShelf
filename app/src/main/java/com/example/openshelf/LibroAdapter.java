@@ -121,6 +121,15 @@ public class LibroAdapter extends RecyclerView.Adapter<LibroAdapter.LibroViewHol
     }
 
 
+    // Este método permite actualizar la lista de libros que muestra el adapter.
+    // Es útil para filtrar la lista o para refrescar los datos cuando cambian.
+    public void actualizarLista(List<Libro> nuevaLista) {
+        this.listaLibros.clear();
+        this.listaLibros.addAll(nuevaLista);
+        notifyDataSetChanged();
+    }
+
+
     // LibroViewHolder implementa el patrón viewholder.
     // Su único propósito es guardar las referencias a las vistas de una fila
     // para que onBindViewHolder pueda acceder a ellas sin repetir llamadas a
