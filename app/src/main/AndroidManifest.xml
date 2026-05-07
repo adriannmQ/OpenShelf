@@ -25,6 +25,12 @@
         <activity android:name=".actividades.ListarLibrosActivity" />
         <activity android:name=".actividades.AnadirLibroActivity" />
         <activity android:name=".actividades.UsuariosActivity" />
+        <activity android:name=".actividades.MostrarUsuariosActivity" />
+        <activity android:name=".actividades.CrearUsuarioActivity" />
+        <activity android:name=".actividades.CambiarContrasenaActivity" />
+        <activity android:name=".actividades.EliminarUsuarioActivity" />
         <activity android:name=".actividades.PrestamosActivity" />
+        <activity android:name=".actividades.AnadirPrestamoActivity" />
+        <activity android:name=".actividades.MarcarComoDevueltoActivity" />
     </application>
 </manifest>

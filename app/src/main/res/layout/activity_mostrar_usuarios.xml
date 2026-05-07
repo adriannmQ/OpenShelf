@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- ── AppBar ── -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#1565C0"
+            app:title="Usuarios"
+            app:titleTextColor="#FFFFFF"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationIconTint="#FFFFFF" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#1976D2"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="6dp"
+            app:iconifiedByDefault="false"
+            app:queryHint="Buscar usuario..."
+            app:searchIcon="@drawable/ic_group" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- ── Lista de usuarios ── -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUsuarios"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="8dp"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <!-- ── Sin resultados ── -->
+    <TextView
+        android:id="@+id/tvSinResultados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="No hay usuarios registrados"
+        android:textSize="16sp"
+        android:textColor="#9E9E9E"
+        android:visibility="gone" />
+
+    <!-- ── Capa oscura al abrir el menú ── -->
+    <View
+        android:id="@+id/dimOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:visibility="gone"
+        android:alpha="0" />
+
+    <!-- ── Contenedor de FABs (esquina inferior derecha) ── -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:gravity="end">
+
+        <!-- Opción: Crear -->
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fabCrear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Crear usuario"
+            android:textColor="#FFFFFF"
+            android:alpha="0"
+            android:visibility="gone"
+            app:icon="@drawable/ic_add_circle"
+            app:iconTint="#FFFFFF"
+            app:backgroundTint="#43A047"
+            app:layout_constraintBottom_toTopOf="@id/fabModificar"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Opción: Modificar -->
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fabModificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Modificar usuario"
+            android:textColor="#FFFFFF"
+            android:alpha="0"
+            android:visibility="gone"
+            app:icon="@drawable/ic_edit"
+            app:iconTint="#FFFFFF"
+            app:backgroundTint="#FB8C00"
+            app:layout_constraintBottom_toTopOf="@id/fabEliminar"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Opción: Eliminar -->
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fabEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Eliminar usuario"
+            android:textColor="#FFFFFF"
+            android:alpha="0"
+            android:visibility="gone"
+            app:icon="@drawable/ic_delete"
+            app:iconTint="#FFFFFF"
+            app:backgroundTint="#E53935"
+            app:layout_constraintBottom_toTopOf="@id/fabMenu"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- FAB principal (siempre visible) -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Menú de acciones"
+            android:src="@drawable/ic_add_circle"
+            app:backgroundTint="#1565C0"
+            app:tint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

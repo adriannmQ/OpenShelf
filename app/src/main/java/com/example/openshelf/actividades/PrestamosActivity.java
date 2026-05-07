@@ -1,5 +1,6 @@
 package com.example.openshelf.actividades;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -60,7 +61,7 @@ public class PrestamosActivity extends AppCompatActivity {
         rvPrestamos.setAdapter(adapter);
 
         fabNuevoPrestamo.setOnClickListener(v ->
-                Toast.makeText(this, "Próximamente: nuevo préstamo", Toast.LENGTH_SHORT).show()
+                startActivity(new Intent(this, AnadirPrestamoActivity.class))
         );
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
