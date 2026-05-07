@@ -59,7 +59,7 @@
             android:layout_margin="16dp"
             android:gravity="center">
 
-            <!-- Fila 1: Ver Libros y Añadir Libro -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -167,7 +167,7 @@
 
             </LinearLayout>
 
-            <!-- Fila 2: Usuarios y Préstamos -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -275,7 +275,7 @@
 
             </LinearLayout>
 
-            <!-- Fila 3: Marcar Prestado y Marcar Devuelto -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Sub-header azul (igual que tu app base) -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp">
 
-                <!-- Crear Usuario -->
+
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardCrearUsuario"
                     android:layout_width="0dp"
@@ -186,7 +186,7 @@
                 android:paddingEnd="8dp"
                 android:paddingBottom="16dp">
 
-                <!-- Modificar Usuario -->
+
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardModificarUsuario"
                     android:layout_width="0dp"
@@ -237,7 +237,7 @@
 
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Mostrar Usuarios -->
+
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardMostrarUsuarios"
                     android:layout_width="0dp"

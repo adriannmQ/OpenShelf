@@ -142,9 +142,9 @@ public class MostrarUsuariosActivity extends AppCompatActivity {
         fabModificar.setVisibility(View.VISIBLE);
         fabEliminar.setVisibility(View.VISIBLE);
 
-        fabCrear.animate().translationY(-56f * 3).alpha(1f).setDuration(200).start();
-        fabModificar.animate().translationY(-56f * 2).alpha(1f).setDuration(200).start();
-        fabEliminar.animate().translationY(-56f * 1).alpha(1f).setDuration(200).start();
+        fabCrear.animate().alpha(1f).setDuration(200).start();
+        fabModificar.animate().alpha(1f).setDuration(200).start();
+        fabEliminar.animate().alpha(1f).setDuration(200).start();
 
         fabMenu.setImageResource(R.drawable.ic_close);
     }
@@ -154,11 +154,11 @@ public class MostrarUsuariosActivity extends AppCompatActivity {
         dimOverlay.animate().alpha(0f).setDuration(150)
                 .withEndAction(() -> dimOverlay.setVisibility(View.GONE)).start();
 
-        fabCrear.animate().translationY(0f).alpha(0f).setDuration(150)
+        fabCrear.animate().alpha(0f).setDuration(150)
                 .withEndAction(() -> fabCrear.setVisibility(View.GONE)).start();
-        fabModificar.animate().translationY(0f).alpha(0f).setDuration(150)
+        fabModificar.animate().alpha(0f).setDuration(150)
                 .withEndAction(() -> fabModificar.setVisibility(View.GONE)).start();
-        fabEliminar.animate().translationY(0f).alpha(0f).setDuration(150)
+        fabEliminar.animate().alpha(0f).setDuration(150)
                 .withEndAction(() -> fabEliminar.setVisibility(View.GONE)).start();
 
         fabMenu.setImageResource(R.drawable.ic_add_circle);

@@ -53,9 +53,7 @@ public class PrestamosActivity extends AppCompatActivity {
 
         // Adapter vacío; se llenará al llegar los datos de la BD
         adapter = new PrestamoAdapter(new ArrayList<>());
-        adapter.setOnPrestamoClickListener((prestamo, position) ->
-                Toast.makeText(this, "Préstamo seleccionado: #" + prestamo.getId(), Toast.LENGTH_SHORT).show()
-        );
+
 
         rvPrestamos.setLayoutManager(new LinearLayoutManager(this));
         rvPrestamos.setAdapter(adapter);

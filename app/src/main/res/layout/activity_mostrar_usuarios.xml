@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#F5F5F5">
 
-    <!-- ── AppBar ── -->
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
@@ -37,7 +37,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- ── Lista de usuarios ── -->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvUsuarios"
         android:layout_width="match_parent"
@@ -47,7 +47,7 @@
         android:clipToPadding="false"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    <!-- ── Sin resultados ── -->
+
     <TextView
         android:id="@+id/tvSinResultados"
         android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
         android:textColor="#9E9E9E"
         android:visibility="gone" />
 
-    <!-- ── Capa oscura al abrir el menú ── -->
+
     <View
         android:id="@+id/dimOverlay"
         android:layout_width="match_parent"
@@ -67,21 +67,19 @@
         android:visibility="gone"
         android:alpha="0" />
 
-    <!-- ── Contenedor de FABs (esquina inferior derecha) ── -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:orientation="vertical"
-        android:gravity="end">
+        android:layout_margin="16dp">
 
-        <!-- Opción: Crear -->
+
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/fabCrear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="16dp"
             android:text="Crear usuario"
             android:textColor="#FFFFFF"
             android:alpha="0"
@@ -92,12 +90,12 @@
             app:layout_constraintBottom_toTopOf="@id/fabModificar"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- Opción: Modificar -->
+
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/fabModificar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="16dp"
             android:text="Modificar usuario"
             android:textColor="#FFFFFF"
             android:alpha="0"
@@ -108,12 +106,12 @@
             app:layout_constraintBottom_toTopOf="@id/fabEliminar"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- Opción: Eliminar -->
+
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/fabEliminar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="16dp"
             android:text="Eliminar usuario"
             android:textColor="#FFFFFF"
             android:alpha="0"
@@ -124,7 +122,7 @@
             app:layout_constraintBottom_toTopOf="@id/fabMenu"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- FAB principal (siempre visible) -->
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabMenu"
             android:layout_width="wrap_content"
